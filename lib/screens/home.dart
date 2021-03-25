@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web_routing/widgets/buttons.dart';
-import 'package:flutter_web_routing/widgets/texts.dart';
 import 'package:get/get.dart';
-import 'package:get_storage/get_storage.dart';
 
 class MyHomePage extends StatefulWidget {
   @override
