@@ -6,6 +6,10 @@ https://www.notion.so/Flutter-web-ca7197ce5e0b4c63ae32eec594ee9985
 
 [https://github.com/quanngovan98/flutter_web_routing](https://github.com/quanngovan98/flutter_web_routing) demo some features here
 
+# Flutter web
+
+[https://github.com/quanngovan98/flutter_web_routing](https://github.com/quanngovan98/flutter_web_routing) demo some features here
+
 1. **Routing**
 - use getx with named route
 - define route like this:
@@ -171,10 +175,38 @@ https://www.notion.so/Flutter-web-ca7197ce5e0b4c63ae32eec594ee9985
 - cookie will be automatically managed by browser
 - use **Dio** package with option **withCredential = true** to send cookie in the request
 
-7. **Responsive**
+7. **Responsive: follow this awesome package** [https://pub.dev/packages/responsive_builder](https://pub.dev/packages/responsive_builder) 
 
 - for easy maintain, should separate screen file to 2 separate files: desktop and mobile
-- use **LayoutBuilder**, **OrientationBuilder** to listen to width, height and orientation then return suitable desktop/mobile UI file.
+- some useful features:
+
+    ```dart
+    ScreenTypeLayout.builder(
+      mobile: (BuildContext context) => Container(color:Colors.blue),
+      tablet: (BuildContext context) => Container(color:Colors.yellow),
+      desktop: (BuildContext context) => Container(color:Colors.red),
+      watch: (BuildContext context) => Container(color:Colors.purple),
+    );
+    // return appropriate widgets base on screen type
+    ```
+
+    ```dart
+    getValueForScreenType<double>(
+                    context: context,
+                    mobile: 10,
+                    tablet: 30,
+                    desktop: 60,
+    )
+    // return appropriate value base on screen type
+    ```
+
+    ```dart
+    OrientationLayoutBuilder(
+      portrait: (context) => Container(color: Colors.green),
+      landscape: (context) => Container(color: Colors.pink),
+    ),
+    // Return a widget function per orientation
+    ```
 
 8. **Permission**
 
