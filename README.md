@@ -46,6 +46,46 @@ https://www.notion.so/Flutter-web-ca7197ce5e0b4c63ae32eec594ee9985
     Get.parameters['name']
     ```
 
+- Safe to get param: create extension on Object like below
+
+    ```bash
+
+    extension CastTypeObjectExtension on Object {
+      int get castToInt {
+        if (this is int) {
+          return this;
+        }
+        return null;
+      }
+
+      double get castToDouble {
+        if (this is double) {
+          return this;
+        }
+        return null;
+      }
+
+      String get castToString {
+        if (this is String) {
+          return this;
+        }
+        return null;
+      }
+
+      bool get castToBool {
+        if (this is bool) {
+          return this;
+        }
+        return null;
+      }
+    }
+    ```
+
+    ```bash
+    //usage
+    Get.parameters['name'].castToString,
+    ```
+
 2. **Pass provider when navigate:**
 
 - create a factory for widget to get param as well as pass provider
@@ -60,7 +100,10 @@ https://www.notion.so/Flutter-web-ca7197ce5e0b4c63ae32eec594ee9985
             create: (context) {
               return UserBloc();
             },
-            child: UserProfile._(name: Get.parameters['name'], age: Get.parameters['age'],));
+            child: UserProfile._(
+    						name: Get.parameters['name'].castToString,
+    			      age: Get.parameters['age'].castToString,
+    				);
       }
 
       final String name;
