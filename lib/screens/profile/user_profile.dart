@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_web_routing/utils/cast_type.dart';
+import 'package:flutter_web_routing/utils/cast_type_extension.dart';
 import 'package:flutter_web_routing/widgets/texts.dart';
 import 'package:get/get.dart';
 
@@ -8,8 +8,8 @@ class UserProfile extends StatefulWidget {
     //pass provider here
     //get param from path here
     return UserProfile._(
-      name: castToString(Get.parameters['name']),
-      age: castToString(Get.parameters['age']),
+      name: Get.parameters['name'].castToString,
+      age: Get.parameters['age'].castToString,
     );
   }
 
