@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web_routing/screens/demo_js.dart';
+import 'package:flutter_web_routing/screens/demo_responsive.dart';
 import 'package:flutter_web_routing/screens/demo_storage.dart';
 import 'package:flutter_web_routing/screens/home.dart';
 import 'package:flutter_web_routing/screens/profile/profiles.dart';
@@ -33,6 +34,10 @@ void main() async {
           GetPage(
             name: '/demo_js',
             page: () => DemoJSScreen(),
+          ),
+          GetPage(
+            name: '/demo_responsive',
+            page: () => DemoResponsiveScreen(),
           ),
         ],
       )

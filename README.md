@@ -6,10 +6,6 @@ https://www.notion.so/Flutter-web-ca7197ce5e0b4c63ae32eec594ee9985
 
 [https://github.com/quanngovan98/flutter_web_routing](https://github.com/quanngovan98/flutter_web_routing) demo some features here
 
-# Flutter web
-
-[https://github.com/quanngovan98/flutter_web_routing](https://github.com/quanngovan98/flutter_web_routing) demo some features here
-
 1. **Routing**
 - use getx with named route
 - define route like this:

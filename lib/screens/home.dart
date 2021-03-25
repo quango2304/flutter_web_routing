@@ -37,6 +37,13 @@ class _MyHomePageState extends State<MyHomePage> {
                 Get.toNamed("/demo_js");
               },
             ),
+            SizedBox(height: 10,),
+            AppSolidButton(
+              text: 'Demo responsive layout',
+              onTap: () {
+                Get.toNamed("/demo_responsive");
+              },
+            ),
           ],
         ),
       ),
